@@ -1,0 +1,4 @@
+aiogram~=2.14
+environs~=8.0.0
+asyncpg~=0.29.0
+Django~=5.0.2
