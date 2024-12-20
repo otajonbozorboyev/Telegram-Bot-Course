@@ -86,7 +86,7 @@ async def subcategories_keyboard(category):
     # Ortga qaytish tugmasini yasaymiz (yuoqri qavatga qaytamiz)
     markup.row(
         InlineKeyboardButton(
-            text="⬅️ Ortga", callback_data=make_callback_data(level=CURRENT_LEVEL - 1)
+            text="⬅️Ortga", callback_data=make_callback_data(level=CURRENT_LEVEL - 1)
         )
     )
     return markup
@@ -118,7 +118,7 @@ async def items_keyboard(category, subcategory):
     # Ortga qaytish tugmasi
     markup.row(
         InlineKeyboardButton(
-            text="⬅️ Ortga",
+            text="⬅️Ortga",
             callback_data=make_callback_data(
                 level=CURRENT_LEVEL - 1, category=category
             ),
@@ -138,7 +138,7 @@ def item_keyboard(category, subcategory, item_id):
     )
     markup.row(
         InlineKeyboardButton(
-            text="⬅️ Ortga",
+            text="⬅️Ortga",
             callback_data=make_callback_data(
                 level=CURRENT_LEVEL - 1, category=category, subcategory=subcategory
             ),

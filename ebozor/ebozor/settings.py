@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'ebozorDB',
-        'USER': 'postgress',
-        'PASSWORD': 'password123',
+        'USER': 'postgres',
+        'PASSWORD': '0',
         'HOST': 'localhost',
         'PORT': '5432'
     }
@@ -113,6 +113,8 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 

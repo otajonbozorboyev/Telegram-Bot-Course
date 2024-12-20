@@ -60,7 +60,7 @@ class Database:
         return sql, tuple(parameters.values())
 
     async def add_user(self, full_name, username, telegram_id):
-        sql = "INSERT INTO users (full_name, username, telegram_id) VALUES($1, $2, $3) returning *"
+        sql = "INSERT INTO products_user (full_name, username, telegram_id) VALUES($1, $2, $3) returning *"
         return await self.execute(sql, full_name, username, telegram_id, fetchrow=True)
 
     async def select_all_users(self):
@@ -86,7 +86,7 @@ class Database:
     async def drop_users(self):
         await self.execute("DROP TABLE products_user", execute=True)
 
-    # ### Mahsulotlar uchun jadval (table) yaratamiz
+    ### Mahsulotlar uchun jadval (table) yaratamiz
     # async def create_table_products(self):
     #     sql = """
     #     CREATE TABLE IF NOT EXISTS products_product (
@@ -120,7 +120,7 @@ class Database:
         price=None,
         description="",
     ):
-        sql = "INSERT INTO products_product(category_code, category_name, subcategory_code, subcategory_name, productname, photo, price, description) VALUES($1, $2, $3, $4, $5, $6, $7, $8) returning *"
+        sql = "INSERT INTO products_product (category_code, category_name, subcategory_code, subcategory_name, productname, photo, price, description) VALUES($1, $2, $3, $4, $5, $6, $7, $8) returning *"
         return await self.execute(
             sql,
             category_code,

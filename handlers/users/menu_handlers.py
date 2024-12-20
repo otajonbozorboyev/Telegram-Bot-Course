@@ -28,9 +28,9 @@ async def list_categories(message: Union[CallbackQuery, Message], **kwargs):
 
     # Agar foydalanuvchidan Message kelsa Keyboardni yuboramiz
     if isinstance(message, Message):
-        await message.answer("Bo'limni tanlang:", reply_markup=markup)
+        await message.answer("Bo'lim tanlang", reply_markup=markup)
 
-    # Agar foydalanuvchidan Callback kelsa Callback matnini o'zgartiramiz
+    # Agar foydalanuvchidan Callback kelsa Callback natbibi o'zgartiramiz
     elif isinstance(message, CallbackQuery):
         call = message
         await call.message.edit_reply_markup(markup)
