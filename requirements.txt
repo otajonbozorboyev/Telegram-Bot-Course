@@ -1,2 +1,3 @@
-aiogram~=2.14
+aiogram~=2.25
 environs~=8.0.0
+marshmallow==3.19.0
